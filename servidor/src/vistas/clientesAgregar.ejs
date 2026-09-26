@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        <a href="#" class="seleccion">CLIENTES</a>
-        <a href="productos.html">PRODUCTOS</a>
-        <a href="ventas.html">VENTAS</a>
-    </header> 
     <section>
-        <a href="index.html">VER</a>
-        <a href="#" class="seleccion">AGREGAR</a>
-        <a href="clientesModificar.html">MODIFICAR</a>
-        <a href="clientesEliminar.html">ELIMINAR</a>
+        <a href="/">VOLVER</a> <!--Uso / para volver-->
+        <a href="/clientes">MENU</a> <!--En los href pongo las rutas que invente en rutaCliente-->
+        <a href="clientesVer">VER</a>
+        <a href="#"  class="seleccion">AGREGAR</a>
+        <a href="clientesModificar">MODIFICAR</a>
+        <a href="clientesEliminar">ELIMINAR</a>s
+        <a href="clientesConsultar">CONSULTAR</a>
     </section>
+    <h1>AGREGAR</h1>
+    <form action="/clientes/nuevo" method="post">
     <input type="number" placeholder="ID" required>
     <input type="text" placeholder="Nombre" required>
     <input type="text" placeholder="Direccion" required>
     <input type="text" placeholder="Telefono" required>
     <input type="text" placeholder="Ciudad" required>
-    <button onclick="agregarCliente()">AGREGAR</button>
+    <input type="submit" value="AGREGAR">
+    </form>
 </body>

@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">CLIENTES</a>
-        <a href="productos.html">PRODUCTOS</a>
-        <a href="#" class="seleccion">VENTAS</a>
-    </header>
     <section>
+        <a href="index.html">VOLVER</a>
         <a href="ventas.html">VER</a>
         <a href="ventasAgregar.html">AGREGAR</a>
-        <a href="ventasModificar.html">MODIFICAR</a>
-        <a href="#" class="seleccion">ELIMINAR</a>
+        <a href="#" class="seleccion">MODIFICAR</a>
+        <a href="ventasEliminar.html">ELIMINAR</a>
     </section>
         <input type="number" placeholder="ID" required>
-        <button onclick="eliminarVenta()">ELIMINAR</button>
+        <input type="text" placeholder="ID cliente">
+        <input type="text" placeholder="ID producto">
+        <input type="text" placeholder="Cantidad">
+        <button onclick="modificarVenta()">MODIFICAR</button>
     <script src="js/script.js"></script>
 </body>
 </html>
