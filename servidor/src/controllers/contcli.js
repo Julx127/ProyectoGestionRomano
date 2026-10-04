@@ -12,6 +12,19 @@ export const altacli = (pet, resp)=>{
     resp.render('clientesAgregar')
 }
 
-export const nuevocli = (pet, resp)=>{
-    resp.send('pio') // aca iria la sentencia para agregar el cliente
+export const nuevocli = async (pet, resp)=>{
+    let id, nom, dir, tel, ciudad;
+    id=pet.body.id;
+    nom=pet.body.nomcli;
+    dir=pet.body.dircli;
+    tel=pet.body.telcli;
+    ciudad=pet.body.ciudad;
+
+    try {
+        let altaSQL=`INSERT INTO clientes (idclientes, nombre, direccion, telefono, ciudad) VALUES '${id}', '${nom}', '${dir}', '${tel}', '${ciudad}',)`;
+        const [registro]=await bdd.query(altaSQL);
+        resp.redirect('/clientes');
+    } catch (error) {
+        console.log('Error en la sentencia: ', error);
+    }
 }
