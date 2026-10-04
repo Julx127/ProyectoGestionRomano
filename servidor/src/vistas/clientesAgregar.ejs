@@ -17,12 +17,12 @@
         <a href="clientesConsultar">CONSULTAR</a>
     </section>
     <h1>AGREGAR</h1>
-    <form action="/clientes/nuevo" method="post">
-    <input type="number" placeholder="ID" required>
-    <input type="text" placeholder="Nombre" required>
-    <input type="text" placeholder="Direccion" required>
-    <input type="text" placeholder="Telefono" required>
-    <input type="text" placeholder="Ciudad" required>
-    <input type="submit" value="AGREGAR">
+    <form action="/clientes/nuevo" method="POST">
+        <input name="id" type="text" placeholder="ID" maxlength="8" size="15">
+        <input name="nomcli" type="text" placeholder="Nombre" maxlength="20" size="15">
+        <input name="dircli" type="text" placeholder="Dirección" maxlength="20" size="15">
+        <input name="telcli" type="text" placeholder="Teléfono" maxlength="8" size="15">
+        <input name="ciudad" type="text" placeholder="Ciudad" maxlength="20" size="15">
+        <button name="enviar" type="submit">Registrar</button>
     </form>
 </body>

@@ -18,7 +18,7 @@ console.log(directorio);
 app.use(express.static(path.join(directorio, 'public')));
 
 //configuramos paginas estaticas
-app.set(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
 
 //habilita recibir datos en formato json
 app.use(express.json())
